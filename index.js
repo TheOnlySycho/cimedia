@@ -23,19 +23,7 @@ client.on("ready", () => {
 client.on('message', async message => {
     if (message.content === `c!music`) {
 	    var link = args[0]
-	   if (command === `pause`) {
-	    const stream = ytdl(`${link}`, { filter: 'audioonly' });
-	const dispatcher = connection.play(stream);
-  dispatcher.pause();
-} else if (command === `resume`) {
-	const stream = ytdl(`${link}`, { filter: 'audioonly' });
-	const dispatcher = connection.play(stream);
-  dispatcher.resume();
-} else if (command === `volume`) {
-	const stream = ytdl(`${link}`, { filter: 'audioonly' });
-	const dispatcher = connection.play(stream);
-  dispatcher.setVolume(args[0]);
-}
+	   
     const connection = await message.member.voice.channel.join();
     if (!args.length) {
 		return message.channel.send(`You didn't provide a song name, ${message.author}!`);
