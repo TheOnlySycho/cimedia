@@ -8,8 +8,8 @@ const prefix = "c!"
 
 //bot init
 client.once('ready', () => {
-	client.user.setActivity("music from YouTube", {
-  type: "STREAMING"
+	client.user.setActivity("Music from YouTube", {
+  type: "PLAYING"
 });
 	console.log(`${client.user.tag} is Ready!`);
 });
