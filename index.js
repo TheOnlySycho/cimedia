@@ -73,13 +73,6 @@ message.channel.send({embed: {
   }
 });
 message.channel.send(`https://i.ytimg.com/vi/${id}/hqdefault.jpg`)
-if (command === `pause`) {
-  dispatcher.pause();
-} else if (command === `resume`) {
-  dispatcher.resume();
-} else if (command === `volume`) {
-  dispatcher.setVolume(args[0]);
-}
 })
 		voiceChannel.join().then(connection => {
 			const stream = ytdl(`${args[0]}`, { filter: 'audioonly' });
@@ -119,15 +112,12 @@ if (command === `pause`) {
       }
     });
     } else if (command === `pause`) {
-	const stream = ytdl(`${args[0]}`, { filter: 'audioonly' });
 	const dispatcher = connection.play(stream);
   dispatcher.pause();
 } else if (command === `resume`) {
-	const stream = ytdl(`${args[0]}`, { filter: 'audioonly' });
 	const dispatcher = connection.play(stream);
   dispatcher.resume();
 } else if (command === `volume`) {
-	const stream = ytdl(`${args[0]}`, { filter: 'audioonly' });
 	const dispatcher = connection.play(stream);
   dispatcher.setVolume(args[0]);
 }
