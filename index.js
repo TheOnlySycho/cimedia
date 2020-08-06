@@ -76,7 +76,7 @@ message.channel.send(`https://i.ytimg.com/vi/${id}/hqdefault.jpg`)
 var song = args[0]
 if (command === `pause`) {
   dispatcher.pause();
-} else if (command = `resume`) {
+} else if (command === `resume`) {
   dispatcher.resume();
 } else if (command === `volume`) {
   dispatcher.setVolume(args[0]);
