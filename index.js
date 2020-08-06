@@ -22,7 +22,7 @@ client.on("ready", () => {
 //bot commands
 client.on('message', async message => {
     if (message.content === `c!music`) {
-	    const link = args[0]
+	    var link = args[0]
     const connection = await message.member.voice.channel.join();
     if (!args.length) {
 		return message.channel.send(`You didn't provide a song name, ${message.author}!`);
