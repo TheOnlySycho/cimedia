@@ -73,7 +73,14 @@ message.channel.send({embed: {
   }
 });
 message.channel.send(`https://i.ytimg.com/vi/${id}/hqdefault.jpg`)
-
+var song = args[0]
+if (command === `pause`) {
+  dispatcher.pause();
+} else if (command = `resume`) {
+  dispatcher.resume();
+} else if (command === `volume`) {
+  dispatcher.setVolume(args[0]);
+}
 })
 		voiceChannel.join().then(connection => {
 			const stream = ytdl(`${args[0]}`, { filter: 'audioonly' });
@@ -85,7 +92,7 @@ message.channel.send(`https://i.ytimg.com/vi/${id}/hqdefault.jpg`)
 	} else if (command === "stop") {
         const voiceChannel = message.member.voice.channel;
        voiceChannel.leave()
-//Search Command
+//Help Command
     } else if (command === "help") {  
       message.channel.send({embed: {
         color: 3447003,
@@ -112,6 +119,6 @@ message.channel.send(`https://i.ytimg.com/vi/${id}/hqdefault.jpg`)
         }
       }
     });
-    }
+    } 
 })
 client.login("NzQwNTI4NTA2MTY0NzQwMTc3.XyqU6g.1Xodjmlt-9sLCVJn5JnipQ7CCCw")
