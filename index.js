@@ -73,7 +73,6 @@ message.channel.send({embed: {
   }
 });
 message.channel.send(`https://i.ytimg.com/vi/${id}/hqdefault.jpg`)
-var song = args[0]
 if (command === `pause`) {
   dispatcher.pause();
 } else if (command === `resume`) {
@@ -119,6 +118,18 @@ if (command === `pause`) {
         }
       }
     });
-    } 
+    } else if (command === `pause`) {
+	const stream = ytdl(`${args[0]}`, { filter: 'audioonly' });
+	const dispatcher = connection.play(stream);
+  dispatcher.pause();
+} else if (command === `resume`) {
+	const stream = ytdl(`${args[0]}`, { filter: 'audioonly' });
+	const dispatcher = connection.play(stream);
+  dispatcher.resume();
+} else if (command === `volume`) {
+	const stream = ytdl(`${args[0]}`, { filter: 'audioonly' });
+	const dispatcher = connection.play(stream);
+  dispatcher.setVolume(args[0]);
+}
 })
 client.login("NzQwNTI4NTA2MTY0NzQwMTc3.XyqU6g.1Xodjmlt-9sLCVJn5JnipQ7CCCw")
