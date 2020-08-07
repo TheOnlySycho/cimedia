@@ -69,7 +69,7 @@ message.channel.send({embed: {
     }
   }
 });
-message.channel.send(`https://i.ytimg.com/vi/${id}/hqdefault.jpg`)
+message.channel.send(`https://i.ytimg.com/vi/${id}/maxresdefault.jpg`)
 })
 		voiceChannel.join().then(connection => {
 			const stream = ytdl(`${args[0]}`, { filter: 'audioonly' });
