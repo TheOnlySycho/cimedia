@@ -60,8 +60,7 @@ message.channel.send({embed: {
       icon_url: client.user.avatarURL
     },
     title: "Now Playing:",
-    url: args[0],
-    description: title,
+    description: [args[0]](title),
     timestamp: new Date(),
     footer: {
       icon_url: client.user.avatarURL,
