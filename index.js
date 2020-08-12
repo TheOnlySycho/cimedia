@@ -60,7 +60,7 @@ const command = args.shift().toLowerCase();
 var id = getYouTubeID(args[0]);
 var getYoutubeTitle = require('get-youtube-title')
 var ytDuration = require("youtube-duration")
-const duration = ytDuration.format(id)
+const duration = ytDuration.format(`${id}`)
 
 
 getYoutubeTitle(id, function (err, title) {
