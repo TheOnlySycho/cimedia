@@ -59,9 +59,12 @@ const command = args.shift().toLowerCase();
  
 var id = getYouTubeID(args[0]);
 var getYoutubeTitle = require('get-youtube-title')
- 
+ const ytDuration = require('youtube-duration')
+const duration = ytDuration.format(id)
+
+
 getYoutubeTitle(id, function (err, title) {
-console.log(`\nNow Playing: ${title}\nLink: ${args[0]}\nServer: ${message.guild.name}\nUser: ${message.author.tag}`)
+console.log(`\nNow Playing: ${title}\nLink: ${args[0]}\nDuration: ${duration}\nServer: ${message.guild.name}\nUser: ${message.author.tag}`)
 message.channel.send({embed: {
     color: 3447003,
     author: {
@@ -69,7 +72,7 @@ message.channel.send({embed: {
       icon_url: client.user.avatarURL
     },
     title: "Now Playing:",
-    description: `[${title}](${args[0]})`,
+    description: `[${title}](${args[0]})\nDuration: ${duration}`,
     timestamp: new Date(),
     footer: {
       icon_url: client.user.avatarURL,
