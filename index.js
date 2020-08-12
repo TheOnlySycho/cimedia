@@ -64,7 +64,7 @@ const duration = ytDuration.format(`${id}`)
 
 
 getYoutubeTitle(id, function (err, title) {
-console.log(`\nNow Playing: ${title}\nLink: ${args[0]}\nDuration: ${duration}\nServer: ${message.guild.name}\nUser: ${message.author.tag}`)
+console.log(`\nNow Playing: ${title}\nLink: ${args[0]}\nServer: ${message.guild.name}\nUser: ${message.author.tag}`)
 message.channel.send({embed: {
     color: 3447003,
     author: {
@@ -72,7 +72,7 @@ message.channel.send({embed: {
       icon_url: client.user.avatarURL
     },
     title: "Now Playing:",
-    description: `[${title}](${args[0]})\nDuration: ${duration}`,
+    description: `[${title}](${args[0]})`,
     timestamp: new Date(),
     footer: {
       icon_url: client.user.avatarURL,
