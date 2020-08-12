@@ -61,6 +61,7 @@ var id = getYouTubeID(args[0]);
 var getYoutubeTitle = require('get-youtube-title')
  
 getYoutubeTitle(id, function (err, title) {
+console.log(`Now Playing: ${title}\nLink: ${args[0]}`)
 message.channel.send({embed: {
     color: 3447003,
     author: {
