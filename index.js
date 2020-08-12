@@ -18,7 +18,7 @@ client.once('ready', () => {
 client.on('message', async message => {
     if (message.content === `c!music`) {
 	    var link = args[0]
-	    import {validateUrl} from 'youtube-validate'
+	    const validateUrl = 'youtube-validate'
 //..
 validateUrl(link)
 .then(res => {
