@@ -18,6 +18,14 @@ client.once('ready', () => {
 client.on('message', async message => {
     if (message.content === `c!music`) {
 	    var link = args[0]
+	    import {validateUrl} from 'youtube-validate'
+//..
+validateUrl(link)
+.then(res => {
+  //do something with the results
+}).catch({
+  // log the error
+})
 	   
     const connection = await message.member.voice.channel.join();
     if (!args.length) {
