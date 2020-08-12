@@ -38,6 +38,7 @@ jobs:
         npm i youtube-search-lib
         npm i yt-search
         npm i ytdl-core
+        npm install youtube-validate
 
     # Runs a set of commands using the runners shell
     - name: Run index.js
