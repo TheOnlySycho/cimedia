@@ -32,11 +32,6 @@ jobs:
         npm i get-audio-id
         npm i get-youtube-id
         npm i get-youtube-title
-        npm i spotify-audio-api
-        npm i youtube-api-search-reloaded
-        npm i youtube-search
-        npm i youtube-search-lib
-        npm i yt-search
         npm i ytdl-core
         npm install youtube-validate
         npm i youtube-duration
