@@ -8,11 +8,13 @@ const prefix = "c!"
 
 //bot init
 client.once('ready', () => {
-	client.user.setActivity("Music from YouTube", {
-  type: "PLAYING"
-});
-client.user.setStatus(`dnd`)
-	console.log(`${client.user.tag} is Ready!`);
+bot.user.setPresence({
+    status: 'dnd',
+    activity: {
+        name: 'Music from YouTube',
+        type: 'STREAMING',
+    }
+})
 });
  
 //bot commands
