@@ -9,11 +9,8 @@ const prefix = "c!"
 //bot init
 client.once('ready', () => {
 bot.user.setActivity({
-    status: 'dnd',
-    activity: {
         name: 'Music from YouTube',
         type: 'STREAMING',
-    }
 })
 });
  
