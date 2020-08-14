@@ -25,7 +25,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: Boot Up
-      run: node boot.js
+      run: |
+        npm i discord.js
+        node boot.js
+
     - name: Downloading Dependencies…
       run: |
         npm i @discordjs/opus
