@@ -38,8 +38,6 @@ jobs:
     - name: Boot Up
       run: |
         npm i discord.js
-        node boot.js
-
     - run: npm ci
     - run: npm run build --if-present
     - name: Run npm test
