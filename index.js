@@ -8,7 +8,7 @@ const prefix = "c!"
 
 //bot init
 client.once('ready', () => {
-bot.user.setActivity({
+client.user.setActivity({
         name: 'Music from YouTube',
         type: 'STREAMING',
 })
