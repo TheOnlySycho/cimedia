@@ -24,7 +24,7 @@ validateUrl(link)
 .then(res => {
   //do something with the results
 }).catch({
-  // log the error
+  console.dir(`A link provided was invalid.`)
 })
 	   
     const connection = await message.member.voice.channel.join();
