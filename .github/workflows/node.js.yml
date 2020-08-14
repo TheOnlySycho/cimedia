@@ -24,6 +24,18 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - name: Downloading Dependencies…
+      run: |
+        npm i @discordjs/opus
+        npm i @joegesualdo/get-youtube-video-thumbnail-url-js
+        npm i discord.js
+        npm i ffmpeg-static
+        npm i get-audio-id
+        npm i get-youtube-id
+        npm i get-youtube-title
+        npm i ytdl-core
+        npm install youtube-validate
+        npm i youtube-duration
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
