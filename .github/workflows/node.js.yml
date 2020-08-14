@@ -24,11 +24,12 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - name: Boot Up
+      run: node boot.js
     - name: Downloading Dependencies…
       run: |
         npm i @discordjs/opus
         npm i @joegesualdo/get-youtube-video-thumbnail-url-js
-        npm i discord.js
         npm i ffmpeg-static
         npm i get-audio-id
         npm i get-youtube-id
