@@ -29,7 +29,7 @@ validateUrl(link)
 	   
     const connection = await message.member.voice.channel.join();
     if (!args.length) {
-		return message.channel.send(`You didn't provide a song name, ${message.author}!`);
+		return message.channel.send(`You didn't provide a YouTube link, ${message.author}!`);
     }
     
     
