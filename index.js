@@ -10,7 +10,7 @@ const prefix = "c!"
 client.once('ready', () => {
 client.user.setActivity({
         name: 'Music from YouTube',
-        type: 'STREAMING',
+        type: 'LISTENING',
 })
 });
  
