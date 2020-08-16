@@ -90,6 +90,14 @@ message.channel.send(`https://i.ytimg.com/vi/${id}/maxresdefault.jpg`)
 	} else if (command === "stop") {
         const voiceChannel = message.member.voice.channel;
        voiceChannel.leave()
+		message.channel.send({embed: {
+    footer: {
+      icon_url: client.user.avatarURL,
+      text: "Stopped the Playback."
+    }
+  }
+});
+console.log(`\n${msg.author.tag} Stopped the Playback.`)
 //Help Command
     } else if (command === "help") {  
       message.channel.send({embed: {
