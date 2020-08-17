@@ -62,7 +62,7 @@ const command = args.shift().toLowerCase();
  
 var id = getYouTubeID(args[0]);
 var getYoutubeTitle = require('get-youtube-title')
-if (link.includes("://");) {
+if (link.includes("://")) {
   console.log("A valid link was provided.")
 } else {
   console.error("An invalid link was provided.")
