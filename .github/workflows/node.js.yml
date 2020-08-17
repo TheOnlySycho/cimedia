@@ -33,7 +33,7 @@ jobs:
         npm i get-youtube-id
         npm i get-youtube-title
         npm i ytdl-core
-        npm install youtube-validate
+        npm i youtube-validate
         npm i youtube-duration
     - name: Boot Up
       run: |
