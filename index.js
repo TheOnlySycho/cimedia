@@ -13,6 +13,13 @@ client.user.setActivity({
         name: 'Music from YouTube',
         type: 'LISTENING',
 })
+process.on('unhandledRejection', error => {
+	console.error('Unhandled promise rejection:', error);
+});
+process.on('AssertionError', error => {
+	console.error('Unhandled promise rejection:', error);
+});
+
 });
  
 //bot commands
