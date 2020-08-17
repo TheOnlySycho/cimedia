@@ -93,6 +93,7 @@ message.channel.send(`https://i.ytimg.com/vi/${id}/maxresdefault.jpg`)
        voiceChannel.leave()
 	const exampleEmbed = new Discord.MessageEmbed()
 	.setFooter('Stopped the Playback');
+message.channel.send(exampleEmbed)
 console.log(`\n${message.author.tag} Stopped the Playback.`)
 //Help Command
     } else if (command === "help") {  
