@@ -58,6 +58,7 @@ if (link.includes("://")) {
   console.log("A valid link was provided.")
 } else {
   console.error("An invalid link was provided.")
+	process.exit(1)
 }
 
 getYoutubeTitle(id, function (err, title) {
