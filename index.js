@@ -102,7 +102,7 @@ message.channel.send(exampleEmbed);
     }
   }
 });
-console.log(`\n${msg.author.tag} Stopped the Playback.`)
+console.log(`\n${message.author.tag} Stopped the Playback.`)
 //Help Command
     } else if (command === "help") {  
       message.channel.send({embed: {
