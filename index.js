@@ -91,6 +91,10 @@ message.channel.send(`https://i.ytimg.com/vi/${id}/maxresdefault.jpg`)
 	} else if (command === "stop") {
         const voiceChannel = message.member.voice.channel;
        voiceChannel.leave()
+	const exampleEmbed = new Discord.MessageEmbed()
+	.setFooter('Stopped the Playback');
+
+message.channel.send(exampleEmbed);
 		message.channel.send({embed: {
     footer: {
       icon_url: client.user.avatarURL,
