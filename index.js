@@ -13,12 +13,7 @@ client.user.setActivity({
         name: 'Music from YouTube',
         type: 'LISTENING',
 })
-process.on('unhandledRejection', error => {
-	console.error('Unhandled promise rejection:', error);
-});
-process.on('AssertionError', error => {
-	console.error('Unhandled promise rejection:', error);
-});
+
 
 });
  
@@ -67,7 +62,11 @@ const command = args.shift().toLowerCase();
  
 var id = getYouTubeID(args[0]);
 var getYoutubeTitle = require('get-youtube-title')
-
+if (link.includes("://");) {
+  console.log("A valid link was provided.")
+} else {
+  console.error("An invalid link was provided.")
+}
 
 getYoutubeTitle(id, function (err, title) {
 console.log(`\nNow Playing: ${title}\nLink: ${args[0]}\nServer: ${message.guild.name}\nUser: ${message.author.tag}`)
