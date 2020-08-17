@@ -22,13 +22,6 @@ client.on('message', async message => {
     if (message.content === `c!music`) {
 	    var link = args[0]
 	    const validateUrl = 'youtube-validate'
-//..
-validateUrl(link)
-.then(res => {
-  //do something with the results
-}).catch({
-
-})
 	   
     const connection = await message.member.voice.channel.join();
     if (!args.length) {
@@ -45,15 +38,6 @@ const args = message.content.slice(prefix.length).trim().split(' ');
 const command = args.shift().toLowerCase();
 	if (command === "play") {
 	    var link = args[0]
-	    var validateUrl = require("youtube-validate")
-//..
-validateUrl(link)
-.then(res => {
-  //do something with the results
-}).catch({
-
-})
- 
  
 // Or, if you're using ES6 syntax:
 		if (message.channel.type !== 'text') return;
