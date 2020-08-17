@@ -35,10 +35,11 @@ jobs:
         npm i ytdl-core
         npm i youtube-validate
         npm i youtube-duration
+        npm i pm2 -g
     - name: Boot Up
       run: |
         npm i discord.js
     - run: npm ci
     - run: npm run build --if-present
     - name: Run npm test
-      run: npm test
+      run: pm2 start index.js
