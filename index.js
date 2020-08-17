@@ -5,6 +5,7 @@ const client = new Discord.Client();
 const ytdl = require('ytdl-core');
 //prefix
 const prefix = "c!"
+//Change to Reboot
 
 //bot init
 client.once('ready', () => {
