@@ -44,7 +44,15 @@ client.on('message', message => {
 const args = message.content.slice(prefix.length).trim().split(' ');
 const command = args.shift().toLowerCase();
 	if (command === "play") {
+	    var link = args[0]
+	    const validateUrl = 'youtube-validate'
+//..
+validateUrl(link)
+.then(res => {
+  //do something with the results
+}).catch({
 
+})
  
  
 // Or, if you're using ES6 syntax:
