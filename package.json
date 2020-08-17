@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "node index.js",
-    "start": "node index.js"
+    "start": "node index.js",
+    "start": "node .",
+    "lint": "eslint ."
   },
   "author": "JuiciiOfficial",
   "license": "ISC",
