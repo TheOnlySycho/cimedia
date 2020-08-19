@@ -57,6 +57,10 @@ var getYoutubeTitle = require('get-youtube-title')
 if (link.includes("://")) {
   console.log("A valid link was provided.")
 } else {
+const exampleEmbed1 = new Discord.MessageEmbed()
+.setColor(`#DC143C`)
+	.setFooter('Please enter a valid link.');
+message.channel.send(exampleEmbed1)
   console.error("An invalid link was provided.")
 	process.exit(1)
 }
@@ -70,7 +74,7 @@ message.channel.send({embed: {
       icon_url: client.user.avatarURL
     },
     title: "Now Playing:",
-    description: `[${title}](${args[0]})`,
+    description: `[${title}](${args[0]}) in ${voiceChannel.name}`,
     timestamp: new Date(),
     footer: {
       icon_url: client.user.avatarURL,
