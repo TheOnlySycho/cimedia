@@ -62,6 +62,7 @@ const exampleEmbed1 = new Discord.MessageEmbed()
 	.setFooter('Please enter a valid link.');
 message.channel.send(exampleEmbed1)
   console.error("An invalid link was provided.")
+process.exit(1)
 }
 
 getYoutubeTitle(id, function (err, title) {
