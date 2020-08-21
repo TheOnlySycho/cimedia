@@ -67,23 +67,20 @@ process.exit(1)
 
 getYoutubeTitle(id, function (err, title) {
 console.log(`\nNow Playing: ${title}\nLink: ${args[0]}\nServer: ${message.guild.name}\nUser: ${message.author.tag}`)
-message.channel.send({embed: {
-    color: 3447003,
-    author: {
-      name: client.user.username,
-      icon_url: client.user.avatarURL
-    },
-    title: "Now Playing:",
-    description: `[${title}](${args[0]}) in ${voiceChannel.name}`,
-    timestamp: new Date(),
-    footer: {
-      icon_url: client.user.avatarURL,
-      text: "c!play"
-    }
-  }
-});
-message.channel.send(`https://i.ytimg.com/vi/${id}/maxresdefault.jpg`)
+
+// inside a command, event listener, etc.
+const exampleEmbed2 = new Discord.MessageEmbed()
+	.setColor('#0099ff')
+	.setTitle('Now Playing')
+	.setDescription(`[${title}](${args[0]})`)
+	.setImage(`https://i.ytimg.com/vi/${id}/maxresdefault.jpg`)
+	.setTimestamp()
+	.setFooter('c!play');
+
+message.channel.send(exampleEmbed2);
 })
+
+		
 		voiceChannel.join().then(connection => {
 			const stream = ytdl(`${args[0]}`, { filter: 'audioonly' });
 			const dispatcher = connection.play(stream);
