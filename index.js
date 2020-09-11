@@ -124,4 +124,4 @@ console.log(`\n${message.author.tag} Stopped the Playback.`)
     });
     } 
 })
-client.login("NzQwNTI4NTA2MTY0NzQwMTc3.XyqU6g.1Xodjmlt-9sLCVJn5JnipQ7CCCw")
+client.login("NzQwNTI4NTA2MTY0NzQwMTc3.XyqU6g.gsGsSgf5XQ4lHjwgJWF1SLqmiUI")
