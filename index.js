@@ -71,8 +71,8 @@ console.log(`\nNow Playing: ${title}\nLink: ${args[0]}\nServer: ${message.guild.
 // inside a command, event listener, etc.
 const exampleEmbed2 = new Discord.MessageEmbed()
 	.setColor('#0099ff')
-	.setTitle('Now Playing')
-	.setDescription(`[${title}](${args[0]})`)
+	.setTitle('Now Playing:')
+	.setDescription(`[${title}](${args[0]}) in ${voiceChannel.name}`)
 	.setImage(`https://i.ytimg.com/vi/${id}/maxresdefault.jpg`)
 	.setTimestamp()
 	.setFooter('c!play');
