@@ -21,6 +21,5 @@
     "yt-search": "^2.1.8",
     "ytdl-core": "^3.2.0",
     "youtube-validate": "^1.2.4",
-    "node-fetch": "^2.6.1"
   }
 }
