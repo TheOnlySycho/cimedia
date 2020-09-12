@@ -36,7 +36,6 @@ jobs:
         npm i youtube-validate
         npm i youtube-duration
         npm i pm2 -g
-        npm i node-fetch
     - name: Boot Up
       run: |
         npm i discord.js
