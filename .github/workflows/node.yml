@@ -26,6 +26,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Downloading Dependencies…
       run: |
+        npm i node-fetch
         npm i @discordjs/opus
         npm i @joegesualdo/get-youtube-video-thumbnail-url-js
         npm i ffmpeg-static
