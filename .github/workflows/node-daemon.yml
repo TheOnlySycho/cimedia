@@ -24,6 +24,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - name: Bot Token
+      run: echo ${{ secrets.GITHUB_TOKEN }}
     - name: Downloading Dependencies…
       run: |
         npm i node-fetch
