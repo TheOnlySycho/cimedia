@@ -9,6 +9,7 @@
     "start": "node .",
     "lint": "eslint ."
   },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
   "author": "JuiciiOfficial",
   "license": "ISC",
   "dependencies": {
