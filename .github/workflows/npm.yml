@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: npm
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -24,7 +24,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Login
-        run: npm login --registry=https://npm.pkg.github.com/
+        run: npm login --registry=https://npm.pkg.github.com/CimediaBot/cimedia
 
       # Runs a set of commands using the runners shell
       - name: Publish
