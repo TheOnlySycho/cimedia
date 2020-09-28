@@ -22,6 +22,8 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
+      - name: Version
+        run: node -v
       # Runs a set of commands using the runners shell
       - name: Login
         run: npm login --registry=https://npm.pkg.github.com/CimediaBot/cimedia
