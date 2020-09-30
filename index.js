@@ -1,3 +1,6 @@
+//WARNING: DO NOT USE CIMEDIA AS YOUR BOT'S NAME!
+const botname = "Cimedia"
+
 //discord.js
 const Discord = require('discord.js');
 const client = new Discord.Client();
@@ -5,7 +8,6 @@ const client = new Discord.Client();
 const ytdl = require('ytdl-core');
 //prefix
 const prefix = "c!"
-//Change to Rebootingslyingernope
 
 //bot init
 client.once('ready', () => {
@@ -68,7 +70,7 @@ process.exit(1)
 getYoutubeTitle(id, function (err, title) {
 console.log(`\nNow Playing: ${title}\nLink: ${args[0]}\nServer: ${message.guild.name}\nUser: ${message.author.tag}`)
 
-// inside a command, event listener, etc.
+// Embed
 const exampleEmbed2 = new Discord.MessageEmbed()
 	.setColor('#0099ff')
 	.setTitle('Now Playing:')
@@ -105,7 +107,7 @@ console.log(`\n${message.author.tag} Stopped the Playback.`)
         },
         title: "Help",
         url: "",
-        description: "Cimedia's Help Section",
+        description: `${botname}'s Help Section`,
         fields: [{
             name: "c!play",
             value: "Usage: c!play *youtube link goes here*\nPlays music from YouTube."
