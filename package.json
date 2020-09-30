@@ -1,16 +1,10 @@
 {
   "name": "cimedia",
-  "version": "1.1.0",
+  "version": "1.0.4",
   "description": "A simple Discord music bot.",
   "main": "index.js",
   "scripts": {
     "test": "node index.js",
-    "start": "node index.js",
-    "start": "node .",
-    "lint": "eslint ."
-  },
-  "publishConfig": { 
-    "registry": "https://npm.pkg.github.com/CimediaBot/cimedia" 
   },
   "author": "JuiciiOfficial",
   "license": "ISC",
